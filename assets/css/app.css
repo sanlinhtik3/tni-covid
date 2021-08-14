@@ -1,0 +1,201 @@
+@font-face {
+    font-family: Myanmar_Sagar;
+    src: url("../fonts/MyanmarSagar/MyanmarSagar.ttf");
+}
+*{
+    font-family: Poppins,"Myanmar_Sagar";
+}
+.vh-50{
+    height: 80vh;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    /*text-align: center;*/
+    /*font-size: 18px;*/
+    /*background: #fff;*/
+    position: relative;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(1px);
+    /*box-shadow: inset 120px 100px 250px #212529, inset -120px -100px 250px #212529;*/
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-slide .swiper__text{
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    color: #fff;
+    z-index: 2;
+    width: 40%;
+}
+.swiper__text h1 {
+    font-size: 5rem;
+}
+.swiper-pagination-bullet {
+    position: relative;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 40px;
+    left: 7%;
+}
+.swiper-pagination {
+    text-align: left;
+    z-index: 2;
+}
+.swiper-pagination-bullet {
+    background-color: #ffffff;
+}
+.swiper-pagination-bullet-active::before {
+    content: '';
+    position: absolute;
+    left: -3.2px;
+    top: -3.5px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #fff;
+}
+.__next, .__prev {
+    top: 90%;
+    z-index: 3;
+    background-color: #00000057;
+    border: 2px solid #FFf;
+    backdrop-filter: blur(10px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #ffffff;
+}
+.__next {
+    right: 7%;
+}
+.__next::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f105';
+}
+.__prev {
+    left: auto;
+    right: 12.5%;
+}
+.__prev::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f104';
+}
+
+/*// `xxl` applies to x-large devices (large desktops, less than 1400px)*/
+@media screen and (max-width: 1400px) {
+    .float__button {
+        top: 35%;
+    }
+    .__prev {
+        right: 12.5%;
+    }
+}
+
+/*// `xl` applies to large devices (desktops, less than 1200px)*/
+@media (max-width: 1200px) {
+    .__prev {
+        right: 14%;
+    }
+}
+
+/*// `lg` applies to medium devices (tablets, less than 992px)*/
+@media (max-width: 992px) {  }
+
+/*// `md` applies to small devices (landscape phones, less than 768px)*/
+@media (max-width: 768px) {
+    .swiper-slide .swiper__text {
+        top: 45%;
+    }
+    .__prev {
+        right: 16.5%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 0.8rem;
+    }
+    .swiper-slide .swiper__text {
+        /*top: 25%;*/
+        top: 40%;
+        left: 3%;
+        width: 80%;
+    }
+    .swiper-slide .swiper__text h1 {
+        font-size: 3.5rem;
+    }
+    .swiper-slide .swiper__text h4 {
+        font-size: 1.2rem;
+    }
+    .swiper-slide::after {
+        /*box-shadow: inset 40px 100px 250px #212529, inset -40px -100px 250px #212529;*/
+    }
+    .swiper-slide .swiper__text p {
+        font-size: small;
+    }
+    .__next, .__prev {
+        top: 94%;
+        width: 45px;
+        height: 45px;
+    }
+    .__next {
+        right: 5%;
+    }
+    .__prev {
+        right: 18%;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+        font-size: 30px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 20px;
+        left: 3%;
+    }
+    .float__button {
+        top: 50%;
+    }
+}
+
+#my-scrollbar::-webkit-scrollbar{
+    width: 0;
+}
+.rounded-4 {
+    border-radius: 12px;
+}

@@ -1,0 +1,77 @@
+{
+  "Global": {
+    "NewConfirmed": 306062,
+    "TotalConfirmed": 205102230,
+    "NewDeaths": 3858,
+    "TotalDeaths": 4331537,
+    "NewRecovered": 0,
+    "TotalRecovered": 0,
+    "LatestDate": "Friday,  13 Aug, 2021"
+  },
+  "Volunteers": [
+    {
+      "id": 1,
+      "name": "နေလင်းထက်",
+      "rarhtuu": "-",
+      "phone": "09 754 688 100",
+      "image": "assets/img/covid19.png",
+      "duty": "//"
+    },
+    {
+      "id": 2,
+      "name": "ဦးအောင်ကျော်ကျော်",
+      "rarhtuu": "-",
+      "phone": "09 753 479 005",
+      "image": "assets/img/covid19.png",
+      "duty": "//"
+    },
+    {
+      "id": 3,
+      "name": "ဦးရဲရင့်နိုင်",
+      "rarhtuu": "-",
+      "phone": "09 753 479 005",
+      "image": "assets/img/covid19.png",
+      "duty": "//"
+    },
+    {
+      "id": 4,
+      "name": "ဦးဖုန်းမြတ်သူ",
+      "rarhtuu": "-",
+      "phone": "09 753 479 005",
+      "image": "assets/img/covid19.png",
+      "duty": "//"
+    }
+  ],
+  "Donations": [
+    {
+      "id": 1,
+      "name": "ဦးအောင်စည်ဖြိုး",
+      "phone": "09 250 247 293",
+      "image": "assets/img/aung_si_phyo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "ဦးမျိုးရာဇာထွန်း",
+      "phone": "09 422 205 123",
+      "image": "assets/img/myo_yazar_htun.jpg"
+    },
+    {
+      "id": 3,
+      "name": "ဦးရဲထက်ဟိန်း",
+      "phone": "09 448 74 543",
+      "image": "assets/img/ye_htet_hein.jpg"
+    },
+    {
+      "id": 4,
+      "name": "ဦးနေလင်းထက်",
+      "phone": "09 754 688 100",
+      "image": "assets/img/nay_lin_htet.jpg"
+    },
+    {
+      "id": 5,
+      "name": "ဦးအောင်ကျော်ကျော်",
+      "phone": "09 753 479 005",
+      "image": "assets/img/aung_kyaw_kyaw.jpg"
+    }
+  ]
+}

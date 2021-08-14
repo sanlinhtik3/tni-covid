@@ -1,0 +1,19 @@
+{
+  "name": "movie-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "bootstrap": "^5.1.0",
+    "jquery": "^3.6.0",
+    "smooth-scrollbar": "^8.6.3",
+    "swiper": "^6.8.1"
+  }
+}
