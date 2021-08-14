@@ -11,7 +11,7 @@
   "Volunteers": [
     {
       "id": 1,
-      "name": "နေလင်းထက်",
+      "name": "ဦးနေလင်းထက်",
       "rarhtuu": "-",
       "phone": "09 754 688 100",
       "image": "assets/img/covid19.png",
@@ -37,7 +37,7 @@
       "id": 4,
       "name": "ဦးဖုန်းမြတ်သူ",
       "rarhtuu": "-",
-      "phone": "09 753 479 005",
+      "phone": "09 766 696 105",
       "image": "assets/img/covid19.png",
       "duty": "//"
     }
@@ -57,7 +57,7 @@
     },
     {
       "id": 3,
-      "name": "ဦးရဲထက်ဟိန်း",
+      "name": "ဦးရဲထက်ဟိဏ်း",
       "phone": "09 448 74 543",
       "image": "assets/img/ye_htet_hein.jpg"
     },
