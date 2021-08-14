@@ -199,3 +199,20 @@
 .rounded-4 {
     border-radius: 12px;
 }
+
+.circle_{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /*background-color: #ffe5d0;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.circle__{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+}
