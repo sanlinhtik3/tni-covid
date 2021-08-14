@@ -293,28 +293,6 @@
             `)
             $(".covid").append(`
                 <div class="col-6 col-lg-3 col-xl-2">
-                    <div class="card text-success rounded-4 shadow">
-                        <div class="card-body">
-                            <i class="fas fa-virus"></i>
-                            <h3 class="mb-0 fw-bold">${json.Global.TotalRecovered}</h3>
-                            <p class="card-text">Total Recovered</p>
-                        </div>
-                    </div>
-                </div>
-            `)
-            $(".covid").append(`
-                <div class="col-6 col-lg-3 col-xl-2">
-                    <div class="card text-danger rounded-4 shadow">
-                        <div class="card-body">
-                            <i class="fas fa-virus"></i>
-                            <h3 class="mb-0 fw-bold">${json.Global.TotalDeaths}</h3>
-                            <p class="card-text">Total Deaths</p>
-                        </div>
-                    </div>
-                </div>
-            `)
-            $(".covid").append(`
-                <div class="col-6 col-lg-3 col-xl-2">
                     <div class="card rounded-4 shadow">
                         <div class="card-body">
                             <i class="fas fa-virus"></i>
@@ -326,11 +304,33 @@
             `)
             $(".covid").append(`
                 <div class="col-6 col-lg-3 col-xl-2">
+                    <div class="card text-success rounded-4 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-virus"></i>
+                            <h3 class="mb-0 fw-bold">${json.Global.TotalRecovered}</h3>
+                            <p class="card-text">Total Recovered</p>
+                        </div>
+                    </div>
+                </div>
+            `)
+            $(".covid").append(`
+                <div class="col-6 col-lg-3 col-xl-2">
                     <div class="card rounded-4 shadow">
                         <div class="card-body">
                             <i class="fas fa-virus"></i>
                             <h3 class="mb-0 fw-bold">${json.Global.NewRecovered}</h3>
                             <p class="card-text">NewRecovered</p>
+                        </div>
+                    </div>
+                </div>
+            `)
+            $(".covid").append(`
+                <div class="col-6 col-lg-3 col-xl-2">
+                    <div class="card text-danger rounded-4 shadow">
+                        <div class="card-body">
+                            <i class="fas fa-virus"></i>
+                            <h3 class="mb-0 fw-bold">${json.Global.TotalDeaths}</h3>
+                            <p class="card-text">Total Deaths</p>
                         </div>
                     </div>
                 </div>
