@@ -1,12 +1,12 @@
 {
   "Global": {
     "NewConfirmed": 0,
-    "TotalConfirmed": 0,
+    "TotalConfirmed": 451,
     "NewDeaths": 0,
-    "TotalDeaths": 0,
+    "TotalDeaths": 2,
     "NewRecovered": 0,
     "TotalRecovered": 0,
-    "LatestDate": "Friday,  13 Aug, 2021"
+    "LatestDate": "Sunday,  15 Aug, 2021"
   },
   "Volunteers": [
     {
