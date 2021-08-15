@@ -32,7 +32,7 @@ fetch('api/data.json')
                 <div class="card text-warning rounded-4 shadow">
                     <div class="card-body">
                         <i class="fas fa-virus"></i>
-                        <h2 class="mb-0 fw-bold">${json.Global.NewConfirmed}</h2>
+                        <h2 class="mb-0 fw-bold">${json.Global.TotalConfirmed}</h2>
                         <p class="card-text">Total Confirmed</p>
                     </div>
                 </div>
