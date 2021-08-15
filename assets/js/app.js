@@ -24,90 +24,96 @@ window.addEventListener('load',function (){
     loading.classList.add('hidden')
 })
 
-fetch('api/data.json')
-    .then(res=>res.json())
-    .then(json=>{
-        $(".covid").append(`
+const covidRow = document.querySelector('.covidRow');
+const volunteers = document.querySelector('.volunteers');
+const latestUpdate = document.querySelector('.latestUpdate');
+const dataD = document.getElementById('data');
+const dataFetch = _ => {
+    fetch('api/data.json')
+        .then(res => res.json())
+        .then(data => {
+            exportAPI(data)
+        })
+}
+dataFetch();
+
+const exportAPI = (data) => {
+    console.log(data)
+
+    // latest date
+    latestUpdate.innerHTML +=`${data.Global.LatestDate}`
+
+    // status
+    covidRow.innerHTML +=`
             <div class="col-6 col-lg-3 col-xl-2">
                 <div class="card text-warning rounded-4 shadow">
                     <div class="card-body">
                         <i class="fas fa-virus"></i>
-                        <h2 class="mb-0 fw-bold">${json.Global.TotalConfirmed}</h2>
+                        <h2 class="mb-0 fw-bold">${data.Global.TotalConfirmed}</h2>
                         <p class="card-text">Total Confirmed</p>
                     </div>
                 </div>
             </div>
-        `)
-        $(".covid").append(`
+        `
+    covidRow.innerHTML +=`
             <div class="col-6 col-lg-3 col-xl-2">
                 <div class="card rounded-4 shadow">
                     <div class="card-body">
                         <i class="fas fa-virus"></i>
-                        <h2 class="mb-0 fw-bold">${json.Global.NewConfirmed}</h2>
+                        <h2 class="mb-0 fw-bold">${data.Global.NewConfirmed}</h2>
                         <p class="card-text">New Confirmed</p>
                     </div>
                 </div>
             </div>
-        `)
-        $(".covid").append(`
+        `
+    covidRow.innerHTML +=`
             <div class="col-6 col-lg-3 col-xl-2">
                 <div class="card text-success rounded-4 shadow">
                     <div class="card-body">
                         <i class="fas fa-virus"></i>
-                        <h2 class="mb-0 fw-bold">${json.Global.TotalRecovered}</h2>
+                        <h2 class="mb-0 fw-bold">${data.Global.TotalRecovered}</h2>
                         <p class="card-text">Total Recovered</p>
                     </div>
                 </div>
             </div>
-        `)
-        $(".covid").append(`
+        `
+    covidRow.innerHTML +=`
             <div class="col-6 col-lg-3 col-xl-2">
                 <div class="card rounded-4 shadow">
                     <div class="card-body">
                         <i class="fas fa-virus"></i>
-                        <h2 class="mb-0 fw-bold">${json.Global.NewRecovered}</h2>
+                        <h2 class="mb-0 fw-bold">${data.Global.NewRecovered}</h2>
                         <p class="card-text">NewRecovered</p>
                     </div>
                 </div>
             </div>
-        `)
-        $(".covid").append(`
+        `
+    covidRow.innerHTML +=`
             <div class="col-6 col-lg-3 col-xl-2">
                 <div class="card text-danger rounded-4 shadow">
                     <div class="card-body">
                         <i class="fas fa-virus"></i>
-                        <h2 class="mb-0 fw-bold">${json.Global.TotalDeaths}</h2>
-                        <p class="card-text">Total Death${json.Global.TotalDeaths > 1 ? 's' : ''}</p>
+                        <h2 class="mb-0 fw-bold">${data.Global.TotalDeaths}</h2>
+                        <p class="card-text">Total Death${data.Global.TotalDeaths > 1 ? 's' : ''}</p>
                     </div>
                 </div>
             </div>
-        `)
-        $(".covid").append(`
+        `
+    covidRow.innerHTML +=`
             <div class="col-6 col-lg-3 col-xl-2">
                 <div class="card rounded-4 shadow">
                     <div class="card-body">
                         <i class="fas fa-virus"></i>
-                        <h2 class="mb-0 fw-bold">${json.Global.NewDeaths}</h2>
-                        <p class="card-text">New Death${json.Global.NewDeaths > 1 ? 's' : ''}</p>
+                        <h2 class="mb-0 fw-bold">${data.Global.NewDeaths}</h2>
+                        <p class="card-text">New Death${data.Global.NewDeaths > 1 ? 's' : ''}</p>
                     </div>
                 </div>
             </div>
-        `)
+        `
 
-        json.Volunteers.map(list => {
-            $("#data").append(`
-                <tr>
-                    <td>${list.id}</td>
-                    <td>${list.name}</td>
-                    <td><a class="text-decoration-none text-black-50" href="${list.phone}">${list.phone}</a></td>
-                    <td>${list.duty}</td>
-                </tr>
-            `)
-        })
-        $(".latestUpdate").html(`${json.Global.LatestDate}`)
-
-        json.Donations.map(list => {
-            $(".volunteers").append(`
+    // donation volunteers
+    data.Donations.map(list => {
+        volunteers.innerHTML +=`
             <div class="col-lg-6 col-xl-4">
                 <div class="card rounded-4 shadow-sm">
                     <div class="card-body">
@@ -125,7 +131,20 @@ fetch('api/data.json')
                     </div>
                 </div>
             </div>
-            `)
-        })
+            `
     })
+
+    // duty volunteers
+    data.Volunteers.map(list => {
+        dataD.innerHTML +=`
+                <tr>
+                    <td>${list.id}</td>
+                    <td>${list.name}</td>
+                    <td><a class="text-decoration-none text-black-50" href="${list.phone}">${list.phone}</a></td>
+                    <td>${list.duty}</td>
+                </tr>
+            `
+    })
+
+}
 
