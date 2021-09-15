@@ -1,12 +1,12 @@
 {
   "Global": {
-    "NewConfirmed": 10,
-    "TotalConfirmed": 1413,
+    "NewConfirmed": 25,
+    "TotalConfirmed": 1438,
     "NewDeaths": 1,
-    "TotalDeaths": 17,
-    "NewRecovered": 26,
-    "TotalRecovered": 1125,
-    "LatestDate": "9:00 PM, 14 Sep, 2021"
+    "TotalDeaths": 18,
+    "NewRecovered": 19,
+    "TotalRecovered": 1144,
+    "LatestDate": "9:00 PM, 15 Sep, 2021"
   },
   "Volunteers": [
     {
